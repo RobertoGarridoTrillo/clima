@@ -1,0 +1,16 @@
+.urlImagen {
+
+  background-image: url("../../../assets/clima.png");
+
+  background-size: cover;
+  /*background-size: 159px, 159px;*/
+
+  /* width and height solo cambia el tamaño del viewport,
+  por eso el cover o el background-size*/
+  width: 159px;
+  height: 159px;
+}
+.imageClima {
+  width: 159px;
+  height: 159px;
+}

@@ -1,0 +1,25 @@
+<div class="container pt-4">
+  <div class="row">
+    <div class="col-12 col-sm-6 text-center">
+      <img [src]="urlImagen" class="imageClima" alt="Un sol">
+    </div>
+    <div class="col-12 col-sm-6">
+      <input [(ngModel)]="ciudad" type="text" class="form-control fs-6 text-center" placeholder="Ingrese ciudad">
+      <button [disabled]="ciudad == ''" (click)="obtenerCiudad()"
+              class="btn btn-primary btn-lg w-100 fs-6 mt-3">OBTENER CLIMA
+      </button>
+      <div *ngIf="loading == true" class="text-center mt-3">
+        <div class="spinner-border text-primary" role="status"></div>
+        <div class="spinner-border text-primary" role="status"></div>
+        <div class="spinner-border text-primary" role="status"></div>
+      </div>
+      <div class="card mt-3">
+        <div class="card-body">
+          <p><b>Temperatura</b><span *ngIf="temperatura != 0"> {{temperatura}} ºC</span></p>
+          <p><b>Humedad</b><span *ngIf="humedad != 0"> {{humedad}} </span></p>
+          <p><b>Clima</b><span *ngIf="clima != ''"> {{clima}} </span></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
